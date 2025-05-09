@@ -1,0 +1,136 @@
+:root {
+    /* Primary Colors */
+    --primary-gold: #D4AF37;
+    --sage-green: #8BA888;
+    --deep-indigo: #1B365D;
+    --deep-maroon: #800020;
+
+    /* Accent Colors */
+    --soft-lavender: #E6E6FA;
+    --muted-teal: #4F7C8C;
+    --pastel-orange: #FFB347;
+
+    /* Background Colors */
+    --bg-cream: #FDFBF7;
+    --bg-off-white: #FAF9F6;
+    --bg-beige: #F5F2EA;
+    --bg-light-sage: #EFF2EF;
+
+    /* Text Colors */
+    --text-dark: #2C3E50;
+    --text-medium: #5D6D7E;
+    --text-light: #8894A0;
+
+    /* Typography */
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+.contact-form-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-cream);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.contact-form-section h2 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-form-section p {
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form-section h3 {
+    font-family: var(--font-heading);
+    color: var(--deep-indigo);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.contact-form-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.contact-form-section input[type="text"],
+.contact-form-section input[type="email"],
+.contact-form-section input[type="date"],
+.contact-form-section select,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form-section texta   rea {
+    resize: vertical;
+}
+
+.contact-form-section input[type="checkbox"],
+.contact-form-section input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.contact-form-section button {
+    /* background-color: var(--primary-gold); */
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 10%;
+}
+
+.contact-form-section button:hover {
+    background-color: #b5942a;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* Remove background color */
+    border: none;
+    font-size: 1rem; /* Reduced font size */
+    cursor: pointer;
+    color: #333;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.close-button i.fas.fa-times {
+    font-size: 1rem; /* Ensure icon size matches text size */
+}
+
+.form-section{
+    margin-bottom: 20px;
+}

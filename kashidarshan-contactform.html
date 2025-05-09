@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashi Darshan Contact Form</title>
+    <link rel="stylesheet" href="css/formstyle.css">
+    <style>
+        .close-button {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333; /* Change color as needed */
+        }
+    </style>
+    <script>
+        function closeForm() {
+            document.querySelector('.contact-form-section').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <!-- Kashi Darshan Request Form Section -->
+    <section class="contact-form-section" style="position: relative;">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h2 class="section-title">Kashi Darshan – Contact Form</h2>
+        <p>Please fill out the details below to help us assist you better.</p>
+        
+        <button class="close-button" onclick="window.location.href='index.html';">✖</button> <!-- Change 'homepage.html' to your desired URL -->
+        
+        <form action="/submit-kashi-darshan-request" method="POST">
+            <h3>1. Personal Information</h3>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="alt-phone">Alternate Phone Number (Optional):</label>
+            <input type="text" id="alt-phone" name="alt-phone">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+
+            <h3>2. Travel Details</h3>
+            <label for="num-travelers">Number of Travelers:</label>
+            <input type="text" id="num-travelers" name="num-travelers" required>
+
+            <label for="adults">Adults (12+ years):</label>
+            <input type="text" id="adults" name="adults" required>
+
+            <label for="children">Children (2-11 years):</label>
+            <input type="text" id="children" name="children">
+
+            <label for="infants">Infants (Under 2 years):</label>
+            <input type="text" id="infants" name="infants">
+
+            <label for="travel-dates">Preferred Travel Dates:</label>
+            <input type="date" id="travel-dates" name="travel-dates" required>
+
+            <label for="duration">Duration of Yatra (Number of Days):</label>
+            <input type="text" id="duration" name="duration" required>
+
+            <label for="accommodation">Preferred Accommodation Type:</label>
+            <select id="accommodation" name="accommodation">
+                <option value="budget">Budget</option>
+                <option value="standard">Standard</option>
+                <option value="luxury">Luxury</option>
+                <option value="dharmashala">Dharmashala</option>
+            </select>
+
+            <label for="accommodation-requirements">Specific Requirements for Accommodation (if any):</label>
+            <textarea id="accommodation-requirements" name="accommodation-requirements"></textarea>
+
+            <label for="transportation">Transportation Preferences:</label>
+            <select id="transportation" name="transportation">
+                <option value="train">Train</option>
+                <option value="flight">Flight</option>
+                <option value="private-car">Private Car</option>
+                <option value="bus">Bus</option>
+            </select>
+
+            <label for="transportation-requirements">Specific Transportation Requirements (if any):</label>
+            <textarea id="transportation-requirements" name="transportation-requirements"></textarea>
+
+            <label for="specific-temples">Any Specific Temples or Rituals you wish to include?</label>
+            <textarea id="specific-temples" name="specific-temples"></textarea>
+
+            <label>Do you require a Priest for Rituals?</label>
+            <div class="radio-group">
+                <input type="radio" id="priest-yes" name="priest" value="yes">
+                <label for="priest-yes">Yes</label>
+                <input type="radio" id="priest-no" name="priest" value="no">
+                <label for="priest-no">No</label>
+            </div>
+
+            <label for="language-preference">Language Preference for Guide/Priest:</label>
+            <select id="language-preference" name="language-preference">
+                <option value="hindi">Hindi</option>
+                <option value="english">English</option>
+                <option value="regional">Regional Languages</option>
+            </select>
+
+            <label>Dietary Preferences:</label>
+            <textarea id="dietary-preferences" name="dietary-preferences"></textarea>
+
+            <h3>3. Yatra Specific Information</h3>
+            <label for="purpose">Purpose of Yatra:</label>
+            <select id="purpose" name="purpose">
+                <option value="religious">Religious Pilgrimage</option>
+                <option value="family">Family Trip</option>
+                <option value="cultural">Cultural Experience</option>
+                <option value="pitru-paksha">Pitru Paksha</option>
+            </select>
+
+            <label for="special-occasion">Special Occasion (if any):</label>
+            <input type="text" id="special-occasion" name="special-occasion">
+
+            <label>Are you interested in any specific rituals like Pind Daan, Ganga Aarti, etc.?</label>
+            <textarea id="specific-rituals" name="specific-rituals"></textarea>
+
+            <label>Do you have any physical limitations or special needs?</label>
+            <div class="radio-group">
+                <input type="radio" id="limitations-yes" name="limitations" value="yes">
+                <label for="limitations-yes">Yes</label>
+                <input type="radio" id="limitations-no" name="limitations" value="no">
+                <label for="limitations-no">No</label>
+            </div>
+
+            <label>Do you require any assistance with Senior Citizens or differently abled people?</label>
+            <div class="radio-group">
+                <input type="radio" id="assistance-yes" name="assistance" value="yes">
+                <label for="assistance-yes">Yes</label>
+                <input type="radio" id="assistance-no" name="assistance" value="no">
+                <label for="assistance-no">No</label>
+            </div>
+
+            <h3>4. Budget and Payment Information</h3>
+            <label for="budget">Approximate Budget per Person (Optional):</label>
+            <input type="text" id="budget" name="budget">
+
+            <label for="payment-method">Preferred Payment Method:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="online-transfer">Online Transfer</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="cash">Cash</option>
+            </select>
+
+            <label for="additional-info">Any additional information or questions:</label>
+            <textarea id="additional-info" name="additional-info"></textarea>
+
+            <h3>5. Marketing and Communication</h3>
+            <label for="referral">How did you hear about us?</label>
+            <select id="referral" name="referral">
+                <option value="google">Google Search</option>
+                <option value="social-media">Social Media</option>
+                <option value="referral">Referral</option>
+            </select>
+
+
+            <button type="submit" class="btn primary">Submit</button>
+        </form>
+        <p>You will receive a confirmation email within 24 hours with the next steps.</p>
+    </section>
+</body>
+</html>

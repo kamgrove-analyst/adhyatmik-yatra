@@ -1,0 +1,212 @@
+/* General Body Styles */
+body {
+    font-family: 'Lato', sans-serif; /* Set a default font for the body */
+    color: #333; /* Set a default text color */
+    margin: 0; /* Remove default margin */
+    /* padding: 20px; Add padding around the body */
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px; /* Set a max width for the main content */
+    margin: 0 auto; /* Center the main content */
+    padding: 20px; /* Add padding inside the main content */
+}
+
+/* Page Section Styles */
+.page-section {
+    padding: 30px 20px; /* Add padding for each section */
+    margin: 20px 0; /* Add margin between sections */
+}
+
+/* Section Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #222;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.section-description {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* About Visual Section */
+.about-visual {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.about-image {
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* About Overview Section */
+.about-overview {
+    margin: 20px 0;
+    text-align: center; /* Center align the overview text */
+}
+
+/* Image Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery figure {
+    flex: 1 1 calc(33.333% - 15px);
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    margin: 50px 0; /* Adjust margin to match the contact page */
+    padding: 30px 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background for visibility */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center align the section title */
+}
+
+.accordion {
+    max-width: 800px; /* Set a max width for the accordion */
+    margin: 0 auto; /* Center the accordion */
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between text and icon */
+    align-items: center; /* Center align items */
+}
+
+.accordion-content {
+    display: none; /* Initially hide the content */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align: left; /* Align text to the left */
+}
+
+.accordion-content p {
+    margin: 0; /* Remove default margin */
+}
+
+.icon {
+    margin-left: auto; /* Push the icon to the right */
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg); /* Rotate icon when active */
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #f1f1f1; /* Light background for footer */
+    padding: 20px 0; /* Padding for footer */
+}
+
+.footer-content {
+    max-width: 1200px; /* Set max width for footer content */
+    margin: 0 auto; /* Center footer content */
+    padding: 0 20px; /* Padding for footer content */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Space between footer sections */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.footer-logo-section {
+    flex: 1; /* Allow logo section to grow */
+}
+
+.footer-links,
+.footer-compliance,
+.footer-newsletter {
+    flex: 1; /* Allow other sections to grow */
+    margin: 10px; /* Margin for spacing */
+}
+
+.footer-links h3,
+.footer-compliance h3,
+.footer-newsletter h3 {
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-links ul,
+.footer-compliance ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li,
+.footer-compliance li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+.footer-newsletter {
+    text-align: left; /* Center align newsletter section */
+}
+
+.footer-newsletter input {
+    padding: 10px; /* Padding for input */
+    margin-right: 5px; /* Space between input and button */
+}
+
+.footer-newsletter button {
+    padding: 10px; /* Padding for button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-visual {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .about-image {
+        width: 100%; /* Full width for image */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .gallery figure {
+        flex: 1 1 100%; /* Full width for gallery items */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Stack footer sections on smaller screens */
+    }
+}
+
+

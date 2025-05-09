@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offerings - Adhyatmik Yatra</title>
+    <meta name="description" content="Explore our spiritual offerings and services">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Adhyatmik Yatra Logo" class="logo-img">
+                <span class="logo-text">Adhyatmik Yatra</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offerings.html">Offerings</a></li>
+                <li><a href="practices.html">Spiritual Practices</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Navigation -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span class="icon"><i class="fas fa-bars"></i></span>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="offerings.html">Offerings</a></li>
+                        <li><a href="practices.html">Spiritual Practices</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="section-header">
+                <h1 class="section-title">Blogs</h1>
+                <p class="section-description">Dive into our latest insights and stories.</p>
+            </div>
+            <!-- Tabs for different offerings -->
+
+            <center><h1>Coming Soon</h1></center>
+            
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <!-- Footer Top Section -->
+            <div class="footer-top">
+                <!-- Logo and About -->
+                <div class="footer-logo-section">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="Adhyatmik Yatra Logo">
+                        <span>Adhyatmik Yatra</span>
+                    </a>
+                    <p class="footer-about">Guiding you through your spiritual journey with authentic practices and divine wisdom.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practices.html">Spiritual Practices</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Compliance -->
+                <div class="footer-compliance">
+                    <h3>Compliance</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to receive spiritual insights and updates</p>
+                    <form class="footer-subscribe-form" action="/subscribe" method="POST">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Adhyatmik Yatra. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const icon = hamburger.querySelector('.icon');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active'); // Toggle the active class
+            hamburger.classList.toggle('active'); // Optional: Add active class to hamburger for styling
+
+            // Toggle the icon between hamburger and "X"
+            if (hamburger.classList.contains('active')) {
+                icon.innerHTML = '<i class="fas fa-times"></i>'; // Change to "X"
+            } else {
+                icon.innerHTML = '<i class="fas fa-bars"></i>'; // Change back to hamburger
+            }
+        });
+    </script>
+</body>
+</html> 

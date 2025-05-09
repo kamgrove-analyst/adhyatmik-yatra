@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/formstyle.css">
+</head>
+<body>
+    <!-- Life Counselling Request Form Section -->
+<section class="contact-form-section">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h2 class="section-title">Adhyatmikyatra – Live Counselling Request Form</h2>
+    <p>Your Journey Inward Begins Here. Please share a few details to help us guide you with clarity, compassion, and purpose.</p>
+    
+    <form action="/submit-counselling-request" method="POST">
+        <h3>1. Personal Details</h3>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="preferredLanguage">Preferred Language:</label>
+        <select id="preferredLanguage" name="preferredLanguage" required>
+            <option value="hindi">Hindi</option>
+            <option value="english">English</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="cityCountry">City & Country:</label>
+        <input type="text" id="cityCountry" name="cityCountry" required>
+
+        <h3>2. Session Preferences</h3>
+        <label>Preferred Mode of Counselling:</label>
+        <label><input type="checkbox" name="counsellingMode" value="videoCall"> Video Call</label>
+        <label><input type="checkbox" name="counsellingMode" value="audioCall"> Audio Call</label>
+        <label><input type="checkbox" name="counsellingMode" value="inPerson"> In-Person (if available)</label>
+
+        <label for="preferredTimeSlot">Preferred Time Slot:</label>
+        <select id="preferredTimeSlot" name="preferredTimeSlot" required>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="flexible">Flexible</option>
+        </select>
+
+        <label for="timeZone">Time Zone (if outside India):</label>
+        <input type="text" id="timeZone" name="timeZone">
+
+        <h3>3. Your Current State</h3>
+        <p>Which area of life are you seeking guidance in?</p>
+        <label><input type="checkbox" name="guidanceAreas" value="relationships"> Relationships</label>
+        <label><input type="checkbox" name="guidanceAreas" value="career"> Career/Work-Life Balance</label>
+        <label><input type="checkbox" name="guidanceAreas" value="health"> Health & Well-being</label>
+        <label><input type="checkbox" name="guidanceAreas" value="emotionalHealing"> Emotional Healing</label>
+        <label><input type="checkbox" name="guidanceAreas" value="lifePurpose"> Life Purpose/Spiritual Growth</label>
+        <label><input type="checkbox" name="guidanceAreas" value="family"> Family & Parenting</label>
+        <label><input type="checkbox" name="guidanceAreas" value="grief"> Grief or Loss</label>
+        <label>Other: <input type="text" name="otherGuidance"></label>
+
+        <label for="currentState">How would you describe your current mental/emotional state?</label>
+        <textarea id="currentState" name="currentState" rows="4" required></textarea>
+
+        <h3>4. Your Intentions</h3>
+        <label for="sessionGoals">What would you like to achieve from this session?</label>
+        <textarea id="sessionGoals" name="sessionGoals" rows="4" required></textarea>
+
+        <label>Have you explored any spiritual or self-help practices before?</label>
+        <label><input type="radio" name="exploredPractices" value="yes" required> Yes</label>
+        <label><input type="radio" name="exploredPractices" value="no"> No</label>
+        <label>If Yes: <textarea name="practicesExplored" rows="2"></textarea></label>
+
+        <h3>5. Optional Spiritual Profile</h3>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="timeOfBirth">Time of Birth:</label>
+        <input type="text" id="timeOfBirth" name="timeOfBirth">
+
+        <label for="placeOfBirth">Place of Birth (City, State, Country):</label>
+        <input type="text" id="placeOfBirth" name="placeOfBirth">
+
+        <h3>6. Final Step</h3>
+        <label for="finalThoughts">Anything else you’d like to share before your session?</label>
+        <textarea id="finalThoughts" name="finalThoughts" rows="4"></textarea>
+
+        <button type="submit" class="btn primary">Submit Request</button>
+    </form>
+    <p>You will receive a confirmation email within 24 hours with the next steps.</p>
+</section>
+</body>
+</html>

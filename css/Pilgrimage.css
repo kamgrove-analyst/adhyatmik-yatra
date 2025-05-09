@@ -1,0 +1,117 @@
+/* css/tabs-accordion.css - Accordion Styles */
+
+.accordion-container {
+    width: 100%;
+    max-width: 900px; /* Adjust width as needed */
+    margin: 2rem auto;
+    /* Optional: Add border or box-shadow for container */
+    /* border: 1px solid var(--border-color, #ddd); */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--border-color-light, #eee); /* Use existing variables if available */
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-trigger {
+    background-color: transparent; /* Clear background */
+    color: var(--text-dark, #333); /* Use existing variables */
+    cursor: pointer;
+    padding: 18px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem; /* Adjust size */
+    font-weight: 600; /* Make titles bolder */
+    font-family: var(--font-heading, 'Cinzel', serif); /* Use existing heading font */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative; /* Needed for the icon */
+}
+
+.accordion-trigger::after { /* Icon indicator (e.g., plus/minus) */
+    content: '\2304'; /* Unicode character for "+" sign */
+    font-family: 'Font Awesome 6 Free'; /* Assuming Font Awesome is loaded */
+    font-weight: 900;
+    color: var(--sage-green, #8fbc8f); /* Use existing variables */
+    float: right;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5; /* Align icon vertically */
+}
+
+.accordion-trigger.active::after {
+    content: "\2303"; /* Font Awesome icon for minus */
+    /* transform: rotate(180deg); */ /* Not needed if using minus icon */
+}
+
+
+.accordion-trigger:hover,
+.accordion-trigger:focus { /* Add focus style for accessibility */
+    background-color: var(--bg-light-sage, #e8f5e9); /* Use existing variables */
+    color: var(--sage-green, #6b8e23);
+}
+
+.accordion-trigger.active {
+    background-color: var(--bg-light-sage, #e8f5e9);
+    color: var(--sage-green, #6b8e23);
+    font-weight: 700; /* Slightly bolder when active */
+}
+
+.accordion-panel {
+    padding: 0 20px;
+    background-color: var(--bg-cream, #fdfbf6);
+    max-height: 0; /* Start closed */
+    overflow: hidden; /* Hide content and scrollbars when closed */
+    transition: max-height 0.35s ease-out, padding 0.35s ease-out; /* Transition max-height and padding */
+    /* border-top: 1px solid var(--border-color-light, #eee); */
+}
+
+.accordion-panel.active {
+    /* Default max-height for LARGER screens */
+    max-height: 400px; /* Adjust this value as needed for large screens */
+    overflow-y: auto; /* Enable vertical scrollbar ONLY if content exceeds max-height */
+    padding: 15px 20px; /* Add vertical padding back when open */
+}
+
+.accordion-panel p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-family: var(--font-body, 'Lato', sans-serif);
+    color: var(--text-medium, #555);
+}
+
+.accordion-panel p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    .accordion-trigger {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    .accordion-panel {
+        padding: 0 15px; /* Adjust padding for smaller screens if needed */
+    }
+     .accordion-panel.active {
+        /* Max-height for SMALLER screens (overrides the default) */
+        max-height: 250px; /* Adjust this value as needed for small screens */
+        padding: 15px; /* Keep padding consistent or adjust */
+        /* overflow-y: auto; is inherited, no need to repeat unless changing */
+    }
+    .accordion-trigger::after {
+       font-size: 0.9rem;
+    }
+}
+
+/* Remove default tab styles if they exist */
+.practices-tabs, .practice-tab {
+    display: none !important; /* Hide old tab elements if they were somehow left */
+}

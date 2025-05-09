@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offerings - Adhyatmik Yatra</title>
+    <meta name="description" content="Explore our spiritual offerings and services">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            .practices-tabs {
+                display: none; /* Hide tabs on mobile */
+            }
+            
+            .mobile-category-dropdown {
+                display: flex;
+                width: 75%;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .mobile-category-dropdown select {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: white;
+                cursor: pointer;
+            }
+            
+            .practice-content {
+                display: none;
+            }
+            
+            .practice-content.active {
+                display: block;
+            }
+        }
+        
+        /* Desktop styles */
+        @media screen and (min-width: 769px) {
+            .mobile-category-dropdown {
+                display: none; /* Hide dropdown on desktop */
+            }
+            
+            .practices-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Adhyatmik Yatra Logo" class="logo-img">
+                <span class="logo-text">Adhyatmik Yatra</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offerings.html">Offerings</a></li>
+                <li><a href="practices.html">Spiritual Practices</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Navigation -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="offerings.html">Offerings</a></li>
+                        <li><a href="practices.html">Spiritual Practices</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="section-header">
+                <h1 class="section-title">Our Offerings</h1>
+                <p class="section-description">Explore our diverse range of spiritual services and practices.</p>
+            </div>
+            
+            <!-- Mobile Dropdown -->
+            <div class="mobile-category-dropdown">
+                <select id="mobileCategorySelect">
+                    <option value="guidance">Spiritual Guidance</option>
+                    <option value="yoga">Yoga & Wellness</option>
+                    <option value="travel">Spiritual Travel</option>
+                    <option value="workshops">Workshops & Courses</option>
+                    <option value="ecommerce">E-Commerce</option>
+                    <option value="digital">Digital Tools</option>
+                    <option value="personalized">Personalized Services</option>
+                    <option value="collaborations">Collaborations</option>
+                </select>
+            </div>
+
+            <!-- Desktop Tabs -->
+            <div class="practices-tabs">
+                <div class="practice-tab active" data-tab="guidance">Spiritual Guidance</div>
+                <div class="practice-tab" data-tab="yoga">Yoga & Wellness</div>
+                <div class="practice-tab" data-tab="travel">Spiritual Travel</div>
+                <div class="practice-tab" data-tab="workshops">Workshops & Courses</div>
+                <div class="practice-tab" data-tab="ecommerce">E-Commerce</div>
+                <div class="practice-tab" data-tab="digital">Digital Tools</div>
+                <div class="practice-tab" data-tab="personalized">Personalized Services</div>
+                <div class="practice-tab" data-tab="collaborations">Collaborations</div>
+            </div>
+
+            <!-- Tab content -->
+            <div class="practice-content active" id="guidance">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Astrology & Horoscope Services</h3>
+                        <p>Explore your astrological chart and receive personalized insights.</p>
+                        <a href="Astrologyandhoroscope.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Spiritual Counseling</h3>
+                        <p>Receive guidance and support on your spiritual journey.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Customized Rituals & Puja Services</h3>
+                        <p>Participate in personalized rituals and puja ceremonies.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="yoga">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Yoga Programs</h3>
+                        <p>Join our yoga programs to enhance your physical and spiritual well-being.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Meditation Workshops</h3>
+                        <p>Participate in workshops to deepen your meditation practice.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Ayurveda & Natural Healing</h3>
+                        <p>Discover the benefits of Ayurveda and natural healing methods.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="travel">
+                <div class="grid-container">
+                    <div class="card" id="prilgrimage">
+                        <h3>Pilgrimage Packages</h3>
+                        <p>Embark on spiritual journeys to sacred sites.</p>
+                        <a href="Pilgrimage.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Retreats & Nature Escapes</h3>
+                        <p>Find peace and rejuvenation in our retreats and nature escapes.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Virtual Pilgrimage</h3>
+                        <p>Experience spiritual travel from the comfort of your home.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="workshops">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Workshops</h3>
+                        <p>Join our workshops to learn and grow in a supportive community.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Courses</h3>
+                        <p>Enroll in courses to deepen your understanding of spiritual practices.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Community Building</h3>
+                        <p>Connect with like-minded individuals and build a spiritual community.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="ecommerce">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Spiritual Products</h3>
+                        <p>Explore our range of spiritual products to support your journey.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Customized Merchandise</h3>
+                        <p>Find unique merchandise tailored to your spiritual needs.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Digital Downloads</h3>
+                        <p>Access digital resources to enhance your spiritual practice.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="digital">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Spiritual Mobile App</h3>
+                        <p>Download our app for spiritual guidance on the go.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Interactive Features on Website</h3>
+                        <p>Engage with interactive tools and resources on our website.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Free Resources</h3>
+                        <p>Access a variety of free resources to support your spiritual growth.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="personalized">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Personalized Guidance Plans</h3>
+                        <p>Receive a customized plan to guide your spiritual journey.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Healing Sessions</h3>
+                        <p>Participate in healing sessions tailored to your needs.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="collaborations">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Expert Talks & Webinars</h3>
+                        <p>Join talks and webinars with spiritual experts.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Local Artisans & Vendors</h3>
+                        <p>Support local artisans and vendors through our platform.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <!-- Footer Top Section -->
+            <div class="footer-top">
+                <!-- Logo and About -->
+                <div class="footer-logo-section">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="Adhyatmik Yatra Logo">
+                        <span>Adhyatmik Yatra</span>
+                    </a>
+                    <p class="footer-about">Guiding you through your spiritual journey with authentic practices and divine wisdom.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practices.html">Spiritual Practices</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Compliance -->
+                <div class="footer-compliance">
+                    <h3>Compliance</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to receive spiritual insights and updates</p>
+                    <form class="footer-subscribe-form" action="/subscribe" method="POST">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Adhyatmik Yatra. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const practiceTabs = document.querySelectorAll('.practice-tab');
+            const practiceContents = document.querySelectorAll('.practice-content');
+            const mobileCategorySelect = document.getElementById('mobileCategorySelect');
+
+            // Function to show content
+            function showContent(contentId) {
+                practiceContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(contentId).classList.add('active');
+            }
+
+            // Desktop tab functionality
+            practiceTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    practiceTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const contentId = tab.getAttribute('data-tab');
+                    showContent(contentId);
+                });
+            });
+
+            // Mobile dropdown functionality
+            mobileCategorySelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                showContent(selectedValue);
+            });
+
+            // Initialize with first tab/content
+            if (window.innerWidth <= 768) {
+                showContent(mobileCategorySelect.value);
+            } else {
+                practiceTabs[0].click();
+            }
+        });
+    </script>
+</body>
+</html> 

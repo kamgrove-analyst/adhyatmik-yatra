@@ -1,0 +1,104 @@
+<!-- General Contact Form Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/formstyle.css">
+</head>
+<body>
+   <section class="contact-form-section">
+       <img src="images/logo.png" alt="Logo" class="logo">
+       <h2 class="section-title">Adhyatmikyatra – Let Us Understand You Better</h2>
+       <p>Welcome to Your Spiritual Journey. We believe each journey is unique. Please help us understand your path so we can offer you the right guidance, tools, and experiences.</p>
+       
+       <form action="/submit-contact" method="POST">
+           <h3>1. Basic Information</h3>
+           <label for="fullName">Full Name:</label>
+           <input type="text" id="fullName" name="fullName" required>
+   
+           <label for="email">Email Address:</label>
+           <input type="email" id="email" name="email" required>
+   
+           <label for="phone">Phone Number (Optional):</label>
+           <input type="text" id="phone" name="phone">
+   
+           <label for="cityCountry">City & Country:</label>
+           <input type="text" id="cityCountry" name="cityCountry" required>
+   
+           <label for="ageGroup">Age Group:</label>
+           <select id="ageGroup" name="ageGroup" required>
+               <option value="below18">Below 18</option>
+               <option value="18-30">18–30</option>
+               <option value="31-45">31–45</option>
+               <option value="46-60">46–60</option>
+               <option value="60plus">60+</option>
+           </select>
+   
+           <label for="gender">Gender:</label>
+           <select id="gender" name="gender" required>
+               <option value="male">Male</option>
+               <option value="female">Female</option>
+               <option value="other">Other</option>
+               <option value="preferNotToSay">Prefer not to say</option>
+           </select>
+   
+           <h3>2. Your Spiritual Interests</h3>
+           <p>Which of these resonate with you right now?</p>
+           <label><input type="checkbox" name="interests" value="meditation"> Meditation</label>
+           <label><input type="checkbox" name="interests" value="yoga"> Yoga</label>
+           <label><input type="checkbox" name="interests" value="astrology"> Astrology / Horoscope</label>
+           <label><input type="checkbox" name="interests" value="vedicRituals"> Vedic Rituals & Pujas</label>
+           <label><input type="checkbox" name="interests" value="lifeCoaching"> Life Coaching / Spiritual Counselling</label>
+           <label><input type="checkbox" name="interests" value="selfHealing"> Self-Healing / Energy Work</label>
+           <label><input type="checkbox" name="interests" value="pilgrimage"> Pilgrimage / Temple Tours</label>
+           <label><input type="checkbox" name="interests" value="mindfulness"> Mindfulness / Inner Peace</label>
+           <label><input type="checkbox" name="interests" value="sacredTexts"> Sacred Texts / Philosophy</label>
+           <label>Something Else: <input type="text" name="otherInterests"></label>
+   
+           <h3>3. Where Are You on Your Journey?</h3>
+           <p>How would you describe your current spiritual state?</p>
+           <label><input type="radio" name="spiritualState" value="justStarting" required> Just starting out, curious to explore.</label>
+           <label><input type="radio" name="spiritualState" value="havePracticed"> Have practiced some form of spirituality before.</label>
+           <label><input type="radio" name="spiritualState" value="activelyPracticing"> Actively practicing, looking to deepen.</label>
+           <label><input type="radio" name="spiritualState" value="goingThroughDifficultPhase"> Going through a difficult phase and seeking support.</label>
+           <label><input type="radio" name="spiritualState" value="lookingForPurpose"> Looking for purpose or answers.</label>
+   
+           <label for="seeking">What are you seeking from Adhyatmikyatra?</label>
+           <textarea id="seeking" name="seeking" rows="4" required></textarea>
+   
+           <h3>4. Preferred Engagement</h3>
+           <p>What kind of support are you open to?</p>
+           <label><input type="checkbox" name="support" value="selfGuided"> Self-guided practices and articles</label>
+           <label><input type="checkbox" name="support" value="personalizedGuidance"> Personalized guidance or counselling</label>
+           <label><input type="checkbox" name="support" value="rituals"> Rituals/Pujas for specific life events</label>
+           <label><input type="checkbox" name="support" value="regularUpdates"> Regular spiritual updates (newsletter/horoscopes)</label>
+           <label><input type="checkbox" name="support" value="retreats"> Retreats / Temple visits / Spiritual tours</label>
+           <label><input type="checkbox" name="support" value="workshops"> Workshops or group circles</label>
+   
+           <h3>5. How would you like us to contact you?</h3>
+           <label><input type="radio" name="contactMethod" value="email" required> Email</label>
+           <label><input type="radio" name="contactMethod" value="whatsapp"> WhatsApp</label>
+           <label><input type="radio" name="contactMethod" value="both"> Both</label>
+           <label><input type="radio" name="contactMethod" value="noContact"> No contact unless I initiate</label>
+   
+           <h3>6. Optional – Spiritual Profile (For Personalized Guidance)</h3>
+           <label for="dob">Date of Birth:</label>
+           <input type="date" id="dob" name="dob">
+   
+           <label for="timeOfBirth">Time of Birth:</label>
+           <input type="text" id="timeOfBirth" name="timeOfBirth">
+   
+           <label for="placeOfBirth">Place of Birth (City, State, Country):</label>
+           <input type="text" id="placeOfBirth" name="placeOfBirth">
+   
+           <h3>7. Final Thoughts (Optional)</h3>
+           <label for="finalThoughts">Is there anything you'd like to ask or share with us before we begin your journey?</label>
+           <textarea id="finalThoughts" name="finalThoughts" rows="4"></textarea>
+   
+           <button type="submit" class="btn primary">Submit Form</button>
+       </form>
+   </section>
+</body>
+</html>

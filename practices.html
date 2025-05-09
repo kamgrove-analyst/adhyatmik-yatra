@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Practices - Adhyatmik Yatra</title>
+    <meta name="description" content="Learn authentic spiritual practices and techniques">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            .practices-tabs {
+                display: none; /* Hide tabs on mobile */
+            }
+            
+            .mobile-category-dropdown {
+                display: flex;
+                width: 75%;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .mobile-category-dropdown select {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: white;
+                cursor: pointer;
+            }
+            
+            .practice-content {
+                display: none;
+            }
+            
+            .practice-content.active {
+                display: block;
+            }
+        }
+        
+        /* Desktop styles */
+        @media screen and (min-width: 769px) {
+            .mobile-category-dropdown {
+                display: none; /* Hide dropdown on desktop */
+            }
+            
+            .practices-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Adhyatmik Yatra Logo" class="logo-img">
+                <span class="logo-text">Adhyatmik Yatra</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offerings.html">Offerings</a></li>
+                <li><a href="practices.html">Spiritual Practices</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Navigation -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="offerings.html">Offerings</a></li>
+                        <li><a href="practices.html">Spiritual Practices</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="section-header">
+                <h1 class="section-title">Spiritual Practices</h1>
+                <p class="section-description">Delve into our spiritual practices that nurture the mind, body, and soul.</p>
+            </div>
+
+            <!-- Mobile Dropdown -->
+            <div class="mobile-category-dropdown">
+                <select id="mobileCategorySelect">
+                    <option value="meditation">Meditation</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="mantra">Mantra & Chanting</option>
+                    <option value="pranayama">Pranayama</option>
+                    <option value="study">Spiritual Study</option>
+                    <option value="rituals">Rituals & Pujas</option>
+                    <option value="fasting">Fasting & Dietary</option>
+                    <option value="healing">Energy Healing</option>
+                    <option value="geometry">Sacred Geometry</option>
+                    <option value="karma">Karma Yoga</option>
+                </select>
+            </div>
+
+            <!-- Tabs for different sections -->
+            <div class="practices-tabs">
+                <div class="practice-tab active" data-tab="meditation">Meditation</div>
+                <div class="practice-tab" data-tab="yoga">Yoga</div>
+                <div class="practice-tab" data-tab="mantra">Mantra & Chanting</div>
+                <div class="practice-tab" data-tab="pranayama">Pranayama</div>
+                <div class="practice-tab" data-tab="study">Spiritual Study</div>
+                <div class="practice-tab" data-tab="rituals">Rituals & Pujas</div>
+                <div class="practice-tab" data-tab="fasting">Fasting & Dietary</div>
+                <div class="practice-tab" data-tab="healing">Energy Healing</div>
+                <div class="practice-tab" data-tab="geometry">Sacred Geometry</div>
+                <div class="practice-tab" data-tab="karma">Karma Yoga</div>
+            </div>
+
+            <!-- Tab content -->
+            <div class="practice-content active" id="meditation">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Guided Meditation</h3>
+                        <p>Recorded or live sessions guiding users through specific techniques.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Silent Meditation</h3>
+                        <p>Provide tips for silent meditation retreats or personal silent sitting.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Mantra Meditation</h3>
+                        <p>Use sacred sounds or phrases to focus the mind.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="yoga">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Hatha Yoga</h3>
+                        <p>Physical postures focused on strength and flexibility.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Kundalini Yoga</h3>
+                        <p>Focus on awakening spiritual energy through breath and movement.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="mantra">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Chanting Workshops</h3>
+                        <p>Learn the art of chanting and its spiritual benefits.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Mantra Recitation</h3>
+                        <p>Explore various mantras and their meanings.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="pranayama">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Breath Control Techniques</h3>
+                        <p>Learn techniques to control and enhance your breath.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Advanced Pranayama</h3>
+                        <p>Explore advanced breathing techniques for deeper practice.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="study">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Scripture Study</h3>
+                        <p>Delve into ancient texts and their teachings.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Philosophy Discussions</h3>
+                        <p>Engage in discussions about spiritual philosophies.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="rituals">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Puja Ceremonies</h3>
+                        <p>Participate in traditional puja ceremonies.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Ritual Workshops</h3>
+                        <p>Learn the significance and process of various rituals.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="fasting">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Spiritual Fasting</h3>
+                        <p>Teach the significance of fasting in different traditions.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Sattvic Diet</h3>
+                        <p>Create meal plans based on sattvic principles.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="healing">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Reiki</h3>
+                        <p>Provide virtual Reiki healing sessions.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Crystal Healing</h3>
+                        <p>Teach the significance of different crystals.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="geometry">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Mandala Drawing Workshops</h3>
+                        <p>Teach the symbolism of mandalas.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Sacred Geometry Symbols</h3>
+                        <p>Explain symbols like the Sri Yantra, Flower of Life, and Merkaba.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-content" id="karma">
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Seva (Selfless Service)</h3>
+                        <p>Encourage acts of selfless service as a form of spiritual practice.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Volunteer Opportunities</h3>
+                        <p>Include volunteer opportunities through the platform.</p>
+                        <a href="contact-form.html" class="btn secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <!-- Footer Top Section -->
+            <div class="footer-top">
+                <!-- Logo and About -->
+                <div class="footer-logo-section">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="Adhyatmik Yatra Logo">
+                        <span>Adhyatmik Yatra</span>
+                    </a>
+                    <p class="footer-about">Guiding you through your spiritual journey with authentic practices and divine wisdom.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practices.html">Spiritual Practices</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Compliance -->
+                <div class="footer-compliance">
+                    <h3>Compliance</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to receive spiritual insights and updates</p>
+                    <form class="footer-subscribe-form" action="/subscribe" method="POST">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Adhyatmik Yatra. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        // Tab functionality with mobile support
+        document.addEventListener('DOMContentLoaded', function() {
+            const practiceTabs = document.querySelectorAll('.practice-tab');
+            const practiceContents = document.querySelectorAll('.practice-content');
+            const mobileSelect = document.getElementById('mobileCategorySelect');
+
+            // Function to show selected content
+            function showContent(contentId) {
+                practiceTabs.forEach(t => t.classList.remove('active'));
+                practiceContents.forEach(c => c.classList.remove('active'));
+                
+                const selectedTab = document.querySelector(`.practice-tab[data-tab="${contentId}"]`);
+                const selectedContent = document.getElementById(contentId);
+                
+                if (selectedTab) selectedTab.classList.add('active');
+                if (selectedContent) selectedContent.classList.add('active');
+            }
+
+            // Desktop tab click handler
+            practiceTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const contentId = tab.getAttribute('data-tab');
+                    showContent(contentId);
+                    // Update mobile select to match
+                    if (mobileSelect) {
+                        mobileSelect.value = contentId;
+                    }
+                });
+            });
+
+            // Mobile select change handler
+            if (mobileSelect) {
+                mobileSelect.addEventListener('change', (e) => {
+                    showContent(e.target.value);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
+</html> 
