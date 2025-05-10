@@ -58,3 +58,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+  
+    // If there’s a hash in URL, simulate a click and scroll to it
+    if (hash) {
+      const trigger = document.querySelector(hash);
+      if (trigger && trigger.classList.contains("accordion-trigger")) {
+        trigger.click();
+        setTimeout(() => {
+          trigger.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 400);
+      }
+    }
+  
+    // Add event listener to all accordion triggers to update URL on click
+    const triggers = document.querySelectorAll(".accordion-trigger");
+    triggers.forEach(trigger => {
+      trigger.addEventListener("click", function () {
+        const id = this.id;
+        if (id) {
+          history.replaceState(null, null, `#${id}`);
+        }
+      });
+    });
+  });
