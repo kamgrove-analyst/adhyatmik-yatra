@@ -1,42 +1,34 @@
 ```mermaid
 graph TD
-    A[Home (index.html)] --> B[About (about.html)]
-    A --> C[Practices (practices.html)]
-    A --> D[Offerings (offerings.html)]
-    A --> E[Book Purohit (bookpurohit.html)]
-    A --> F[Articles (insights-articles.html)]
-    A --> G[Audio/Video Library (video-audio-library.html)]
-    A --> H[Blog (blog.html)]
-    A --> I[Contact (contact.html)]
-    A --> J[Community (community.html)]
-    A --> K[Resource Center (resource-center.html)]
-    A --> L[Spiritual Travel (offerings.html#travel)]
-    A --> M[Kashi Darshan (virtual-pilgrimage.html)]
-    A --> N[Pind Daan (pind-daan.html)]
-    A --> O[Vedic Astrology (vedic-astrology.html)]
-    A --> P[Spiritual Counseling (spiritualcounseling.html)]
-    A --> Q[Various Rituals & Ceremonies]
-    Q --> D
-    Q --> N
-    Q --> O
-    Q --> P
+    home["Home (index.html)"] --> about["About"]
+    home --> practices["Practices"]
+    home --> offerings["Offerings"]
+    home --> bookpurohit["Book Purohit"]
+    home --> articles["Articles"]
+    home --> audio["Audio/Video Library"]
+    home --> blog["Blog"]
+    home --> contact["Contact"]
+    home --> community["Community"]
+    home --> resources["Resource Center"]
+    home --> travel["Spiritual Travel"]
+    home --> kashi["Kashi Darshan"]
+    home --> pinddaan["Pind Daan"]
+    home --> astrology["Vedic Astrology"]
+    home --> counseling["Spiritual Counseling"]
+    home --> rituals["Various Rituals & Ceremonies"]
 
-    subgraph Static Assets
-        S1[CSS (styles.css, responsive.css, ...)]
-        S2[JS (main.js, navigation.js, carousel.js)]
-        S3[Images]
+    rituals --> offerings
+    rituals --> pinddaan
+    rituals --> astrology
+    rituals --> counseling
+
+    subgraph "Static Assets"
+        css["CSS"]
+        js["JS"]
+        images["Images"]
     end
 
-    A -.-> S1
-    A -.-> S2
-    A -.-> S3
-    B -.-> S1
-    C -.-> S1
-    D -.-> S1
-    D -.-> S2
-    D -.-> S3
-
-    %% Testimonials and Carousels
-    A --> R[Testimonial Section]
-    A --> S[Circle Carousel (Meditation, Puja, Astrology, Community, etc.)]
+    home -.-> css
+    home -.-> js
+    home -.-> images
 ```
